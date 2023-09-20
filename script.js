@@ -119,13 +119,13 @@ document.querySelector('.uzb').addEventListener('click', () => {
 
 document.querySelector('.turk').addEventListener('click', function () {
   lenguage = 'turk';
-  document.querySelector('.again').textContent = 'Again!';
-  document.querySelector('.between').textContent = 'Between 1 and 20';
-  document.querySelector('h1').textContent = 'Guess My Number!';
-  document.querySelector('.check').textContent = 'Check!';
+  document.querySelector('.again').textContent = 'Qayta!';
+  document.querySelector('.between').textContent = '1 ile 20 arasında';
+  document.querySelector('h1').textContent = 'Numaramı Tahmin Et!';
+  document.querySelector('.check').textContent = 'Kontrol etmek!';
   document.querySelector('.message').textContent = 'Tahmin etmeye başla..';
   document.querySelector('.label-score').innerHTML =
-    '💯 Score: <span class="score">20</span>';
+    '💯 Gol: <span class="score">20</span>';
   document.querySelector('.label-highscore').innerHTML =
-    '🥇 Highscore: <span class="highscore">0</span>';
+    '🥇 Yüksek skor: <span class="highscore">0</span>';
 });

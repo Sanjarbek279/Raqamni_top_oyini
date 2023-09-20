@@ -21,7 +21,7 @@ body {
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  height: 300px;
   border-bottom: 7px solid #eee;
 }
 
@@ -279,9 +279,10 @@ right {
   } 
   .btn{
     padding: 1rem  1rem;
-    font-size: 1rem;
-
-    
+    font-size: 1rem; 
+  }
+  .BTNS{
+    padding-left: 20px;
   }
   .between{
   padding-left: 2rem;
@@ -291,6 +292,19 @@ right {
   }
   .uzb{
     left: 17rem;
+  }
+  
+}
+@media screen and (max-width: 400px) {
+  .again{
+    left: 1rem;
+  }
+  .uzb{
+    left: 21rem;
+  }
+
+  .turk{
+    left: 12rem;
   }
   
 }
