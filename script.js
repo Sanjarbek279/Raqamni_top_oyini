@@ -61,7 +61,36 @@ function showMessage(massage) {
 ///   ? -- uchun tek shirish uchun sonni beramiz
 
 // document.querySelector('.number').textContent = compuyternewnamber;
-
+function Retur(valu) {
+    //  foydalanuvchi kiritilgan son
+    let guessNumber = Number(document.querySelector('.guess').value);
+  
+    if (score > 1) {
+      if (!guessNumber) {
+        showMessage('❗️Numara yok');
+        // document.querySelector('.message').textContent = '❗️Numara yok';
+      } else if (guessNumber !== compuyternewnamber) {
+        showMessage(
+          guessNumber > compuyternewnamber ? '📉 Çok yüksek' : '📈 Cok düşük'
+        );
+  
+        score--;
+        document.querySelector('.score').textContent = score;
+      } else {
+        showMessage('✅ Doğru numara');
+        document.querySelector('.number').textContent = guessNumber;
+        document.querySelector('body').style.backgroundColor = '#60b347';
+        document.querySelector('.number').style.width = '25rem';
+  
+        highScore = score > highScore ? score : highScore;
+        document.querySelector('.highscore').textContent = highScore;
+      }
+    } else {
+      showMessage('❌ Oyunu kaybettin!');
+  
+      document.querySelector('.score').textContent = 0;
+    }
+  }
 document.querySelector('.check').addEventListener('click', () => {
   //  foydalanuvchi kiritilgan son
   let guessNumber = Number(document.querySelector('.guess').value);
@@ -129,3 +158,10 @@ document.querySelector('.turk').addEventListener('click', function () {
   document.querySelector('.label-highscore').innerHTML =
     '🥇 Yüksek skor: <span class="highscore">0</span>';
 });
+
+// overlay.addEventListener('click' , Retur);
+
+document.addEventListener('keydown' , e => {
+  // console.log(e);
+  if(e.key === 'Enter') Retur();
+})
